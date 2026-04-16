@@ -214,3 +214,9 @@ add_executable(ego_mavros_bridge src/ego_mavros_bridge.cpp)
  )
 
  add_dependencies(ego_mavros_bridge ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+ add_executable(uav_control src/uav_control.cpp)
+
+ target_link_libraries(uav_control
+   ${catkin_LIBRARIES}
+ )
